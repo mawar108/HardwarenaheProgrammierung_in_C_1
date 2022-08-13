@@ -1,0 +1,4 @@
+Wie viele Zahlen sollen eingelesen werden? Bitte geben Sie 9 	Wie viele Zahlen sollen eingelesen werden? Bitte geben Sie 9 
+Maximum 1. Drittel: 6 						Maximum 1. Drittel: 6
+Maximum 2. Drittel: 8 						Maximum 2. Drittel: 8
+Maximum 3. Drittel: 8 						Maximum 3. Drittel: 8

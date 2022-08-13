@@ -1,0 +1,4 @@
+Wie viele Zahlen sollen eingelesen werden? Bitte geben Sie 30	Wie viele Zahlen sollen eingelesen werden? Bitte geben Sie 30
+Maximum 1. Drittel: 32737 					Maximum 1. Drittel: 32737
+Maximum 2. Drittel: 31336 					Maximum 2. Drittel: 31336
+Maximum 3. Drittel: 30583 					Maximum 3. Drittel: 30583
