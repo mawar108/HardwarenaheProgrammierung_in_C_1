@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Übung 1</title>
+<style>
+body {
+    margin: 30px auto;
+    max-width: 600px;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: Arial;
+}
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 0 40px 0 40px;
+}
+h2 {
+    margin: 60px 0 20px 0;
+}
+.table-header-row {
+    border-bottom: 2px solid black;
+}
+.table-footer-row {
+    border-top: 2px solid black;
+}
+.center {
+    text-align: center;
+}
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+.monospace {
+    font-family: monospace;
+}
+code {
+    border-radius: 5px;
+    padding: 3px 8px 3px 8px;
+    background-color: lightgray;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+    font-size: 85%;
+}
+.code {
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+    padding: 15px;
+    background-color: lightgray;
+    white-space: nowrap;
+    border-radius: 5px;
+    font-size: 11px;
+}
+.green {
+    color: #32a852;
+}
+.red {
+    color: #ff0000;
+}
+.orange {
+    color: #fa9e0c;
+}
+.overflow {
+    margin: 15px;
+    display: flex;
+    /*justify-content: center;*/
+}
+</style>
+</head>
+<body>
+<h1 class="center">Übung 1</h1>
+<h2 class="center">Zusammenfassung</h2>
+<table>
+<tr class="table-header-row"><th class="left">Aufgabe</th><th class="right">Bestanden</th></tr>
+<tr><td style="font-family:monospace">refactoring</td><td class="right green"><b>Ja ✓ 😄</b></td>
+<tr><td style="font-family:monospace">arrays</td><td class="right orange"><b>Knapp (✓) 😐</b></td>
+<tr><td style="font-family:monospace">reverse</td><td class="right orange"><b>Knapp (✓) 😐</b></td>
+<tr class="table-footer-row"><td><b>Summe</b></td><td class="right"><b>3 / 3</b></td></tr>
+
+</table>
+<h2>Aufgabe refactoring</h2>
+<div><b>Bestanden: <span class="green">Ja ✓ 😄</span></b></div>
+<div>Die Tests für diese Aufgabe liefen fehlerfrei durch.
+</div>
+<div>Auf der Standardausgabe wurde folgender Text ausgegeben:
+</div>
+<div> <div class="overflow"><div class="code">  1: Checking code style of laden.c<br>  2: Checking code style of laden.h<br>OK: erwartete_ausgabe1.txt stimmt mit ausgabe1.txt überein.<br><br>OK: erwartete_ausgabe2.txt stimmt mit ausgabe2.txt überein.<br><br>OK: erwartete_ausgabe3.txt stimmt mit ausgabe3.txt überein.</div></div></div>
+<div></div>
+<h2>Aufgabe arrays</h2>
+<div><b>Bestanden: <span class="orange">Knapp (✓) 😐</span></b></div>
+<div>Die Tests für diese Aufgabe liefen fehlerfrei durch.
+</div>
+<div>Auf der Standardausgabe wurde folgender Text ausgegeben:
+</div>
+<div> <div class="overflow"><div class="code">  1: Checking code style of arrays.c<br>  2: Checking code style of main.c<br>  3: Checking code style of arrays.h<br>OK: erwartete_ausgabe1.txt stimmt mit ausgabe1.txt überein.<br>OK: erwartete_ausgabe2.txt stimmt mit ausgabe2.txt überein.<br>OK: erwartete_ausgabe3.txt stimmt mit ausgabe3.txt überein.<br>OK: erwartete_ausgabe4.txt stimmt mit ausgabe4.txt überein.</div></div></div>
+<div></div>
+<h3>Anmerkungen</h3>
+<div>In Ihrer Lösung kopieren Sie die Array-Werte, was dafür spricht, dass Sie Zeigerarithmetik wahrscheinlich noch nicht ganz verstanden haben. Zeiger können in C durch Addition oder Subtraktion auf andere Speicheradressen verschoben werden. Informieren Sie sich nochmal über Zeiger und Zeigerarithmetik und versuchen Sie die Aufgabe ohne Kopieren zu lösen.</div>
+<div>Der Datentyp <code>int</code> ist häufig kleiner als der Datentyp <code>size_t</code>. Auf vielen Systemen reicht der Datentyp <code>int</code> höchstens bis 2147483647. Wenn das Array eine Länge von Beispielsweise 3 Milliarden Elementen hätte würde dies zu fehlerhaftem verhalten führen. Deshalb sollte der Datentyp <code>int</code> hier nicht als Zählvariable oder Länge verwendet werden.</div>
+<h2>Aufgabe reverse</h2>
+<div><b>Bestanden: <span class="orange">Knapp (✓) 😐</span></b></div>
+<div>Die Tests für diese Aufgabe liefen fehlerfrei durch.
+</div>
+<div>Auf der Standardausgabe wurde folgender Text ausgegeben:
+</div>
+<div> <div class="overflow"><div class="code">Running suite(s): Core<br>100%: Checks: 11, Failures: 0, Errors: 0<br>Running suite(s): Core<br>100%: Checks: 11, Failures: 0, Errors: 0<br>Running suite(s): Core<br>100%: Checks: 1, Failures: 0, Errors: 0<br>Running suite(s): Core<br>Reversing 4 values of array of length 4 starting at index 0<br>Input    array: 1, 2, 3, 4<br>Expected array: 4, 3, 2, 1<br>Reversed array: 4, 3, 2, 1<br><br>Reversing 4 values of array of length 7 starting at index 2<br>Input    array: 3, 4, 1, 2, 2, 1, 5<br>Expected array: 3, 4, 1, 2, 2, 1, 5<br>Reversed array: 3, 4, 1, 2, 2, 1, 5<br><br>Reversing 3 values of array of length 3 starting at index 0<br>Input    array: 1, 2, 3<br>Expected array: 3, 2, 1<br>Reversed array: 3, 2, 1<br><br>Reversing 1 values of array of length 1 starting at index 0<br>Input    array: 1<br>Expected array: 1<br>Reversed array: 1<br><br>Reversing 1 values of array of length 3 starting at index 1<br>Input    array: 1, 1, 1<br>Expected array: 1, 1, 1<br>Reversed array: 1, 1, 1<br><br>Reversing 0 values of array of length 4 starting at index 0<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 0 values of array of length 4 starting at index 1000<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 0 values of array of length 4 starting at index 1<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 0 values of array of length 4 starting at index 2<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 0 values of array of length 4 starting at index 3<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 1 values of array of length 4 starting at index 0<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 1 values of array of length 4 starting at index 1<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 1 values of array of length 4 starting at index 2<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 1 values of array of length 4 starting at index 3<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 3 values of array of length 9 starting at index 3<br>Input    array: 5, 6, 7, 1, 2, 3, 4, 8, 9<br>Expected array: 5, 6, 7, 3, 2, 1, 4, 8, 9<br>Reversed array: 5, 6, 7, 3, 2, 1, 4, 8, 9<br><br>Reversing 4 values of array of length 9 starting at index 3<br>Input    array: 5, 6, 7, 1, 2, 3, 4, 8, 9<br>Expected array: 5, 6, 7, 4, 3, 2, 1, 8, 9<br>Reversed array: 5, 6, 7, 4, 3, 2, 1, 8, 9<br><br>Reversing 0 values of array of length 4 starting at index 5<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 1 values of array of length 4 starting at index 5<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 2 values of array of length 4 starting at index 5<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 0 values of array of length 4 starting at index 99999999<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 1 values of array of length 4 starting at index 99999999<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 4 values of array of length 4 starting at index 1<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 3 values of array of length 4 starting at index 2<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 2 values of array of length 4 starting at index 3<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 1 values of array of length 4 starting at index 4<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 9223372036854775807 values of array of length 4 starting at index 9223372036854775807<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 9223372036854775808 values of array of length 4 starting at index 9223372036854775807<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 9223372036854775807 values of array of length 4 starting at index 9223372036854775808<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 9223372036854775808 values of array of length 4 starting at index 9223372036854775808<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>100%: Checks: 9, Failures: 0, Errors: 0<br>Running suite(s): Core<br>Reversing 4 values of array of length 4 starting at index 0<br>Input    array: 1, 2, 3, 4<br>Expected array: 4, 3, 2, 1<br>Reversed array: 4, 3, 2, 1<br><br>Reversing 4 values of array of length 7 starting at index 2<br>Input    array: 3, 4, 1, 2, 2, 1, 5<br>Expected array: 3, 4, 1, 2, 2, 1, 5<br>Reversed array: 3, 4, 1, 2, 2, 1, 5<br><br>Reversing 3 values of array of length 3 starting at index 0<br>Input    array: 1, 2, 3<br>Expected array: 3, 2, 1<br>Reversed array: 3, 2, 1<br><br>Reversing 1 values of array of length 1 starting at index 0<br>Input    array: 1<br>Expected array: 1<br>Reversed array: 1<br><br>Reversing 1 values of array of length 3 starting at index 1<br>Input    array: 1, 1, 1<br>Expected array: 1, 1, 1<br>Reversed array: 1, 1, 1<br><br>Reversing 0 values of array of length 4 starting at index 0<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 0 values of array of length 4 starting at index 1000<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 0 values of array of length 4 starting at index 1<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 0 values of array of length 4 starting at index 2<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 0 values of array of length 4 starting at index 3<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 1 values of array of length 4 starting at index 0<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 1 values of array of length 4 starting at index 1<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 1 values of array of length 4 starting at index 2<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 1 values of array of length 4 starting at index 3<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 3 values of array of length 9 starting at index 3<br>Input    array: 5, 6, 7, 1, 2, 3, 4, 8, 9<br>Expected array: 5, 6, 7, 3, 2, 1, 4, 8, 9<br>Reversed array: 5, 6, 7, 3, 2, 1, 4, 8, 9<br><br>Reversing 4 values of array of length 9 starting at index 3<br>Input    array: 5, 6, 7, 1, 2, 3, 4, 8, 9<br>Expected array: 5, 6, 7, 4, 3, 2, 1, 8, 9<br>Reversed array: 5, 6, 7, 4, 3, 2, 1, 8, 9<br><br>Reversing 0 values of array of length 4 starting at index 5<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 1 values of array of length 4 starting at index 5<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 2 values of array of length 4 starting at index 5<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 0 values of array of length 4 starting at index 99999999<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 1 values of array of length 4 starting at index 99999999<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 4 values of array of length 4 starting at index 1<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 3 values of array of length 4 starting at index 2<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 2 values of array of length 4 starting at index 3<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 1 values of array of length 4 starting at index 4<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 9223372036854775807 values of array of length 4 starting at index 9223372036854775807<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 9223372036854775808 values of array of length 4 starting at index 9223372036854775807<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 9223372036854775807 values of array of length 4 starting at index 9223372036854775808<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>Reversing 9223372036854775808 values of array of length 4 starting at index 9223372036854775808<br>Input    array: 1, 2, 3, 4<br>Expected array: 1, 2, 3, 4<br>Reversed array: 1, 2, 3, 4<br><br>100%: Checks: 9, Failures: 0, Errors: 0<br><br>Tests bestanden.</div></div></div>
+<div></div>
+<h3>Anmerkungen</h3>
+<div>Der Datentyp <code>int</code> ist häufig kleiner als der Datentyp <code>size_t</code>. Auf vielen Systemen reicht der Datentyp <code>int</code> höchstens bis 2147483647. Wenn das Array eine Länge von Beispielsweise 3 Milliarden Elementen hätte würde dies zu fehlerhaftem verhalten führen. Deshalb sollte der Datentyp <code>int</code> hier nicht als Zählvariable oder Länge verwendet werden.</div></body>
+</html>
+
